@@ -10,7 +10,7 @@ const ThemeToggle: React.FC = () => {
     <button
       onClick={toggleTheme}
       className="w-10 h-10 rounded-full flex items-center justify-center text-primary-black dark:text-accent-yellow bg-primary-black/10 dark:bg-dark-secondary"
-      aria-label="Toggle them"
+      aria-label="Toggle theme"
     >
       <AnimatePresence mode="wait" initial={false}>
         <motion.div
