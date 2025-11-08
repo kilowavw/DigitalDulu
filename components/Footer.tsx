@@ -6,48 +6,85 @@ import { useLanguage } from '../context/LanguageContext';
 const Footer: React.FC = () => {
   const { t } = useLanguage();
 
-  const footerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.7 } }
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { 
+      opacity: 1, 
+      transition: { 
+        duration: 0.8,
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+      } 
+    }
   };
 
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+  };
+
+  const socialIconVariants = {
+      initial: { scale: 1, y: 0 },
+      hover: { scale: 1.1, y: -5, transition: { type: 'spring', stiffness: 300 } },
+  }
+
   return (
-    <footer id="contact" className="bg-primary-black dark:bg-black text-background-white">
-      <SectionContainer className="py-12 sm:py-16">
+    <footer id="contact" className="bg-primary-black text-background-white dark:bg-gradient-to-b dark:from-dark-bg dark:to-black scroll-mt-20">
+      <SectionContainer className="py-24 sm:py-32 relative overflow-hidden">
+        {/* Subtle background elements */}
+        <div className="absolute -bottom-1/4 -left-1/4 w-1/2 h-1/2 bg-accent-yellow/5 rounded-full blur-3xl" aria-hidden="true" />
+        <div className="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-accent-yellow/5 rounded-full blur-3xl" aria-hidden="true" />
+
         <motion.div
-          className="text-center"
+          className="relative z-10 text-center max-w-3xl mx-auto"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          variants={footerVariants}
+          variants={containerVariants}
         >
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-accent-yellow">
+          <motion.h2 variants={itemVariants} className="text-4xl font-black tracking-tighter sm:text-5xl text-accent-yellow">
             {t('footer.title')}
-          </h2>
-          <p className="mt-4 text-lg leading-6 text-gray-300">
+          </motion.h2>
+          <motion.p variants={itemVariants} className="mt-6 text-lg leading-8 text-gray-300">
             {t('footer.subtitle')}
-          </p>
-          <div className="mt-8 flex justify-center space-x-6">
-             <a href="#" className="text-gray-400 hover:text-accent-yellow transition-colors">
+          </motion.p>
+          <motion.div variants={itemVariants} className="mt-10 flex items-center justify-center gap-x-6">
+             <motion.a 
+                href="https://www.instagram.com/digitaldulu.id/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-400 hover:text-accent-yellow transition-colors"
+                variants={socialIconVariants}
+                initial="initial"
+                whileHover="hover"
+              >
                 <span className="sr-only">Instagram</span>
-                <ion-icon name="logo-instagram" style={{fontSize: '32px'}}></ion-icon>
-            </a>
-             <a href="#" className="text-gray-400 hover:text-accent-yellow transition-colors">
+                <ion-icon name="logo-instagram" style={{fontSize: '40px'}}></ion-icon>
+            </motion.a>
+             <motion.a 
+                href="http://wa.me/+6285157751861"
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-400 hover:text-accent-yellow transition-colors"
+                variants={socialIconVariants}
+                initial="initial"
+                whileHover="hover"
+             >
                 <span className="sr-only">WhatsApp</span>
-                <ion-icon name="logo-whatsapp" style={{fontSize: '32px'}}></ion-icon>
-            </a>
-          </div>
-          <p className="mt-8 text-2xl font-black tracking-widest text-white">
+                <ion-icon name="logo-whatsapp" style={{fontSize: '40px'}}></ion-icon>
+            </motion.a>
+          </motion.div>
+          <motion.p variants={itemVariants} className="mt-12 text-3xl font-black tracking-widest text-white opacity-80">
             DIGITALDULU.ID
-          </p>
-          <div className="mt-8 border-t border-gray-700 pt-8">
+          </motion.p>
+          <motion.div variants={itemVariants} className="mt-12 border-t border-gray-700/50 pt-8">
             <p className="text-base text-gray-400">
               © {new Date().getFullYear()} DigitalDulu. {t('footer.copyright')}
             </p>
-            <p className="mt-2 text-sm text-secondary-gray">
+            <p className="mt-2 text-sm text-gray-500">
               {t('footer.disclaimer')}
             </p>
-          </div>
+          </motion.div>
         </motion.div>
       </SectionContainer>
     </footer>

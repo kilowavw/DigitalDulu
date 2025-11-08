@@ -102,6 +102,28 @@ export const translations = {
       subtitle: 'Jelajahi tumpukan teknologi modern yang kami gunakan untuk membangun solusi digital Anda.',
       description: 'Kami memanfaatkan teknologi terdepan seperti React untuk antarmuka yang dinamis, Node.js untuk backend yang efisien, dan Docker untuk deployment yang konsisten. Pilihan teknologi kami memastikan produk Anda tidak hanya canggih, tetapi juga andal, dapat diskalakan, dan mudah dirawat.',
     },
+    ai: {
+      title: 'Inovasi AI Cerdas',
+      subtitle: 'Implementasikan AI di pekerjaan anda',
+      feature1: {
+          title: 'Machine Learning',
+          description: 'Membangun model prediktif dan wawasan berbasis data untuk mendorong pengambilan keputusan yang cerdas.'
+      },
+      feature2: {
+          title: 'Pemrosesan Bahasa Alami',
+          description: 'Membuat aplikasi yang dapat memahami, menafsirkan, dan merespons bahasa manusia secara alami.'
+      },
+      feature3: {
+          title: 'Computer Vision',
+          description: 'Mengembangkan sistem yang mampu "melihat", menganalisis, dan memahami informasi visual dari gambar dan video.'
+      },
+    },
+    modal: { // New translations for ProjectModal
+      close: 'Tutup',
+      viewLive: 'Lihat Live Demo',
+      viewCode: 'Lihat Kode GitHub',
+      technologies: 'Teknologi Digunakan',
+    },
     footer: {
       title: 'Tertarik Bekerja Sama?',
       subtitle: 'Hubungi kami melalui sosial media untuk diskusi lebih lanjut.',
@@ -212,6 +234,28 @@ export const translations = {
       subtitle: 'Explore the modern technology stack we use to build your digital solutions.',
       description: 'We leverage cutting-edge technologies like React for dynamic interfaces, Node.js for efficient backends, and Docker for consistent deployment. Our technology choices ensure your product is not only state-of-the-art but also reliable, scalable, and maintainable.',
     },
+    ai: {
+      title: 'Intelligent AI Innovation',
+      subtitle: 'Implement AI in your work.',
+      feature1: {
+          title: 'Machine Learning',
+          description: 'Building predictive models and data-driven insights to drive intelligent decision-making.'
+      },
+      feature2: {
+          title: 'Natural Language Processing',
+          description: 'Creating applications that can understand, interpret, and respond to human language naturally.'
+      },
+      feature3: {
+          title: 'Computer Vision',
+          description: 'Developing systems that can "see," analyze, and understand visual information from images and video.'
+      },
+    },
+    modal: { // New translations for ProjectModal
+      close: 'Close',
+      viewLive: 'View Live Demo',
+      viewCode: 'View GitHub Code',
+      technologies: 'Technologies Used',
+    },
     footer: {
       title: 'Interested in Working Together?',
       subtitle: 'Contact us via social media for further discussion.',
@@ -245,4 +289,9 @@ export type TranslationKey =
   | 'whatwecando.marketing.title' | 'whatwecando.marketing.description'
   | 'portfolio.title' | 'portfolio.subtitle'
   | 'techstack.title' | 'techstack.subtitle' | 'techstack.description'
+  | 'ai.title' | 'ai.subtitle'
+  | 'ai.feature1.title' | 'ai.feature1.description'
+  | 'ai.feature2.title' | 'ai.feature2.description'
+  | 'ai.feature3.title' | 'ai.feature3.description'
+  | 'modal.close' | 'modal.viewLive' | 'modal.viewCode' | 'modal.technologies' // New keys
   | 'footer.title' | 'footer.subtitle' | 'footer.copyright' | 'footer.disclaimer';
