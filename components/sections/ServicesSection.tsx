@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import SectionContainer from '../ui/SectionContainer';
 import ServiceCard from '../ui/ServiceCard';
 import { useLanguage } from '../../context/LanguageContext';
@@ -31,7 +31,8 @@ const ServicesSection: React.FC = () => {
   ];
   
   const title = t('services.title');
-  const titleContainerVariants = {
+  // Fix: Explicitly type animation variants with `Variants` from framer-motion to resolve type inference issues.
+  const titleContainerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -39,7 +40,8 @@ const ServicesSection: React.FC = () => {
     },
   };
 
-  const letterVariants = {
+  // Fix: Explicitly type animation variants with `Variants` from framer-motion to resolve type inference issues.
+  const letterVariants: Variants = {
     hidden: { opacity: 0, y: 50, rotate: 15 },
     visible: {
       opacity: 1,

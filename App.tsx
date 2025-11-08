@@ -9,7 +9,7 @@ import PortfolioSection from './components/sections/PortfolioSection';
 import WhatWeCanDoSection from './components/sections/WhatWeCanDoSection';
 import WhoWeAreSection from './components/sections/WhoWeAreSection'; // Import WhoWeAreSection
 import HowWeWorkSection from './components/sections/HowWeWorkSection';
-import ThreeDSection from './components/sections/ThreeDSection';
+import TechAndAISection from './components/sections/TechAndAISection';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
@@ -34,7 +34,7 @@ const MainContent: React.FC = () => {
         <WhoWeAreSection /> {/* Add WhoWeAreSection here */}
         <WhatWeCanDoSection />
         <PortfolioSection />
-        <ThreeDSection />
+        <TechAndAISection />
       </main>
       <Footer />
     </div>

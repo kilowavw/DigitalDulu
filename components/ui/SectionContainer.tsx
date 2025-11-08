@@ -10,7 +10,7 @@ const SectionContainer = forwardRef<HTMLDivElement, SectionContainerProps>(
     return (
       <section
         ref={ref}
-        className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 ${className || ''}`}
+        className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 scroll-mt-20 ${className || ''}`}
         {...props}
       >
         {children}
